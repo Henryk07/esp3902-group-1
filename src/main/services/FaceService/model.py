@@ -7,7 +7,7 @@ from cv2.dnn import blobFromImage, readNetFromCaffe
 class FaceModel:
     def __init__(self, confidenceThreshold: float=0.6):
         self.prototype = join(dirname(__file__), "models/deploy.prototxt.txt")
-        self.model = join(dirname(__file__), "models/res10_300x300_ssd_iter_140000.caffemodel")
+        self.model = join(dirname(__file__), "models/face.caffemodel")
         self.confidenceThreshold = confidenceThreshold
         if self.prototype is None:
             raise Exception("must specify prototype '.prototxt.txt' file "
