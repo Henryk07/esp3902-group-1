@@ -8,6 +8,7 @@ class FaceMaskRunner:
         self.stateDict = torch.load("src/main/services/FaceMaskService/models/face_mask.pt", map_location = self.device).get("state_dict")
         self.model = FaceMaskModel()
         self.model.load_state_dict(self.stateDict, strict=False)
+        self.model.to(self.device)
         self.model.eval()
 
     def run(self, frame) -> bool:

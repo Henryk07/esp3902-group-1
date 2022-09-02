@@ -1,7 +1,6 @@
 import torch
 import json
 from typing import List, Dict
-import sys
 
 class PersonModel:
 
@@ -12,6 +11,7 @@ class PersonModel:
         # torch.save(self.model, "src/main/services/PersonService/models/person.pt")
         # self.model = torch.load("src/main/services/PersonService/models/person.pt", map_location = self.device)
         self.model.classes = 0
+        self.model.to(self.device)
         self.model.eval()
 
     def infer(self, frame: str) -> List[Dict[str, object]]:
