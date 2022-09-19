@@ -10,14 +10,14 @@ class Motor:
     Method to tilt the motor for a certain angle
     @params angle The angle of which the motor should tilt (positive for up, negative for down)
     '''
-    def tilt(angle: float) -> None:
+    def tilt(self, angle: float) -> None:
         pass
 
     '''
     Method to rotate the motor for a certain angle
     @params angle The angle of which the motor should rotate (positive for right, negative for left)
     '''
-    def rotate(angle: float) -> None:
+    def rotate(self, angle: float) -> None:
         pass
 
 '''
