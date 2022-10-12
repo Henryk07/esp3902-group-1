@@ -34,3 +34,8 @@ pip3 install -r requirements.txt
 python3 src/main/main.py
 ```
 When running on live video, press 'q' or do a KeyboardInterrupt to stop the video stream
+
+## References
+https://docs.ultralytics.com/
+https://towardsdatascience.com/how-i-built-a-face-mask-detector-for-covid-19-using-pytorch-lightning-67eb3752fd61
+https://github.com/X-zhangyang/Real-World-Masked-Face-Dataset
