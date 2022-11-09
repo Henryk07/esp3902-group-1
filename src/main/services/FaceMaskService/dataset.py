@@ -1,8 +1,10 @@
-from torch import tensor, long
-from torch.utils.data import Dataset
-from torchvision.transforms import Compose, ToPILImage, Resize, ToTensor
-import cv2
 import numpy as np
+import cv2
+from torchvision.transforms import Compose, ToPILImage, Resize, ToTensor
+
+from torch.utils.data import Dataset
+from torch import tensor, long
+
 
 class FaceMaskDataset(Dataset):
     def __init__(self, dataFrame = None):

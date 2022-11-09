@@ -1,12 +1,12 @@
-import torch
 import json
 from typing import List, Dict
+import torch
 
 class PersonModel:
 
     def __init__(self) -> None:
         self.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-        self.model = torch.hub.load("ultralytics/yolov5", "yolov5m", pretrained = True)
+        self.model = torch.hub.load("ultralytics/yolov5", "yolov5n", pretrained = True)
         # TODO load model without using pytorch hub, i.e. load from downloaded model
         # torch.save(self.model, "src/main/services/PersonService/models/person.pt")
         # self.model = torch.load("src/main/services/PersonService/models/person.pt", map_location = self.device)

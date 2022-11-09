@@ -1,11 +1,14 @@
+from services.FaceMaskService.dataset import FaceMaskDataset
+
 from pathlib import Path
 from typing import Dict, List
 
 import pandas as pd
+
+from sklearn.model_selection import train_test_split
 import pytorch_lightning as pl
 import torch
 import torch.nn.init as init
-from sklearn.model_selection import train_test_split
 from torch import Tensor
 from torch.nn import (Conv2d, CrossEntropyLoss, Linear, MaxPool2d, ReLU,
                       Sequential)
@@ -13,8 +16,6 @@ from torch.optim import Adam
 from torch.optim.optimizer import Optimizer
 from torch.utils.data import DataLoader
 from torchmetrics import Accuracy
-
-from services.FaceMaskService.dataset import FaceMaskDataset
 
 class FaceMaskModel(pl.LightningModule):
     """ MaskDetector PyTorch Lightning class
