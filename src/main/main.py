@@ -1,5 +1,6 @@
 from services.FrameLoaderService.FrameLoader import FrameLoaderOpenCV
 from services.PersonService.runner import PersonRunner
+from services.FollowerService.Follower import Follower
 
 import sys
 sys.path.append("./")
@@ -70,7 +71,10 @@ def video():
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
 
+def follow():
+    follower = Follower()
+    follower.follow()
     
 if __name__ == "__main__":
-    video()
-
+    # video()
+    follow()
