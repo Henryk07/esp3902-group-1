@@ -46,7 +46,7 @@ class Motor:
 
         MIN_DUTY, MAX_DUTY = 2.5, 12.5 # Percentage range
 
-        test_time = 0.5
+        test_time = 0.25
         up_time = period * (angle / 180 * (MAX_DUTY-MIN_DUTY) + MIN_DUTY) / 100 # ms
         down_time = period - up_time # ms
 
